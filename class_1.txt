@@ -1,0 +1,78 @@
+void main() {
+  //variables and data types
+//   num num1 = 10.5;
+//   print(num1*2);
+//   String name1 = "Hammad ";
+//   print(name1*5);
+//   bool check = 10<5;
+//   print(check);
+//   var list1 = ["a","b",5,"e",8];
+//   print(list1);
+//   print(list1[1]);
+  
+  //operators 
+  //#ARthematic,
+  double a = 10.5;
+  int b = 5;
+  print(a+b);
+  print(a-b);
+  print(a*b);
+  double intresult = a/b;  
+  print(intresult);
+  int daubleresult = a~/b;
+  print(daubleresult); //for integer output
+  num unknownresult = a%b;
+  print(unknownresult); 
+  int c1 = 20;
+  int d1 = ++c1; //preincrement
+  print("This is d1 :${d1}");
+  int c2 = 20;
+  int d2 = c2++; //postincrement
+  print("This is d2 :${d2}");
+  
+   int e1 = 20;
+  int f1 = --e1; //predecrement
+  print("This is f1 :${f1}");
+  int e2 = 20;
+  int f2 = e2--; //postdecrement
+  print("This is f2 :${f2}");
+  //#equality and relational operator
+  print(a>b);
+  print(a<b);
+  bool result1 = a<=b; //because relationaal operatiors returns only                         a boolean value so we'll have to bool                              variable to store the result 
+  print(result1);
+  print(a>=b);
+  bool result2 = a==b;
+  print("a==b : ${result2}");
+  print(a!=b);
+  
+  //#logical operators
+  bool andoperator = 5<10 && 5<4; //give true when all conditions                                     are true
+  print("the result of AND operator is :${andoperator}");
+  bool oroperator = 5<10 || 5<4; //give true when atleast one                                         conditions is true
+  print("the result of OR operator is :${oroperator}");
+  bool notoperator = !(5<4); //returns inverse of result
+  print("the result of NOT operator is :${notoperator}");
+  
+  //#Conditional statements IF,ELSE IF,ELSE
+ 
+  //#IF ELSE -> USED TO CHECK ONE CONDITION
+  int a3 =10;
+  int b3 = 8;
+  if(a3<b3){
+    print("a3 is less then b3");
+  }else{
+    print("a3 is not less than b3");
+  }
+  //#IF,ELSE IF,ELSE -> USED TO CHECK MORE THAN ONE CONDITION
+  if(a3<b3){
+    print("${a3} is less then ${b3}");
+  }
+  else if(a3==b3){
+    print("${a3} is equal to then ${b3}");
+  }
+  else{
+    print("${a3} is greater than ${b3}");
+  }
+  
+}
