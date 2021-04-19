@@ -1,0 +1,102 @@
+void main() {
+  print("Hey programmer let's start with list and dictionary");
+  //LIST-> bunch of values in a single valrible,variable od a list is an object
+  var list1 =[1,'a',2,"pro"]; 
+  //some real world use
+//   var rollnum=[1,2,3,4,5,6,7,8,9,10];
+//   var seatnum=["EB20102037","EB20102038","EB20102039",  "EB20102040","EB20102047","EB20102048","EB20102049",
+//   "EB20102057","EB20102081","EB20102097"];
+//  var name=["Hammad","waqar","shahzaib","rizwan","ahmed","fahad",
+//  "ahsan ilyas","danial","hassan","ibrahem"]; 
+//   var sem=3;
+//   print("ROLL#\t SEAT#\t\t NAME\t  SEMESTER");
+//   for(int i in rollnum){
+//     print("${i}\t ${seatnum[i-1]}\t ${name[i-1]}\t\t ${sem}");
+//   }
+  //methods of list->calling methods of list on list var(objects)
+  var list2 = [5,'c',"pro",56.22];
+                //t call elemements
+//   print(list2.last);
+//   print(list2.first);
+//   print(list2[2]);
+//   print(list1.length);//to find lenth of list
+                  //to add elements
+//   list2.add("added_value1");
+//   list2.addAll(["added_value2","added_value3","added_value4"]);
+//   print(list2);
+//   list2.insert(0,"Ali");
+//   list2.insertAll(0,[11,22,33,44,55]);
+//   print(list2);
+  //var list3 =[5,6,88,11,4,55,90];
+  //list3.sort();//use to sort elements in ascending order
+//print("original list : ${list3}");
+//   print("the list3 is empty : ${list3.isEmpty}");
+//   print("the list3 is not empty : ${list3.isNotEmpty}");
+                //to update elements
+//   list3[0]=500; //to update one elememts
+//   list3.replaceRange(1,4,[55,66]);//if we'll not give all new values it will remove that value from list which was in range but not given new value 
+//   print(list3);
+  
+                //to remove elements
+//   list3.remove(11); //give value
+//    print(list3);
+//   list3.removeAt(5);//give index
+//    print(list3);
+//   list3.removeRange(1,3); //give range of values(indexes staring and ending fo values to be deleted)
+//    print(list3);
+//   list3.removeLast();
+//    print(list3);
+// //   print(list2);
+//   list3.removeWhere((e)=> e < 50);
+//   print(list3);
+//   list3.retainWhere((e)=> e >11);
+//   print(list3);
+//   list3.clear();
+//    print(list3);
+                //reversed list
+//   var reversed_list = List.of(list3.reversed);
+//   print("the reversed list is ${reversed_list}");
+  
+              //MAP (bunch of key value pair in a single variable)
+//  var map1 = {1:"name",2:"position",3:"salary"};
+//           //to call elemets of map
+//  print(map1);
+//  print(map1.keys);
+//  print(map1.values);
+//  print(map1[2]);
+//  print("map is empty : ${map1.isEmpty}");
+//  print("map is not empty : ${map1.isNotEmpty}");
+//  print("does map contains key name-> 1 :${map1.containsKey(1)}");
+//  print("does map contains value name-> age:${map1.containsValue("salary")}");//to check presence of any key/value
+//  print("the length of map is : ${map1.length}");//to find number of key Value pair
+//               //to add new key value pair in an existing map 
+//   map1[4]="age";  //to add one key value pair
+//   map1.addAll({5:"new value1",6:"new value2"});//to add more than one key value pair
+//   var var1 = map1.putIfAbsent(7,()=> "experience");//add key value pair only if key doesn't exist already 
+  
+//             //to update value of any key/keys
+//   map1[5]="updated value1";
+  
+//             //to merge 2 or more than 2 maps
+//   var map2 = {'x':"xxxx",'y':"yyyy"};
+//   var map3 = {'z':"zzzz",'t':"tttt"};
+//   var merged_map1 ={}..addAll(map2)..addAll(map3)..addAll(map1);
+//   var merged_map2 = {...map2,...map3,...map1};
+//   print(merged_map1);
+//   print(merged_map2);
+//            // to remove key value pair
+  var map4 = {10:"hammad",20:"waqar",30:"rizwan"}; 
+  print(map4);
+  map4.remove(30);//remove through key
+  map4.removeWhere((key,value)=>value.startsWith("w"));//remove through value
+  print(map4);
+             //from iterables (creating a map using 2 lists)
+  var roll_num = [1,2,3,4,5];
+  var names =['ahmed','bilal','naeem','faheem','ali'];
+  var std_id =Map.fromIterables(roll_num,names);
+  print(std_id);
+            //forEach (work as for in loop iterate unless keys & valus end)
+  std_id.forEach((key,value){
+    print("the key is : ${key} & it's value is ${value}");
+  });
+}
