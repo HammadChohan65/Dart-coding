@@ -1,0 +1,56 @@
+void main() {
+  print("Hey programmer let's start with loops");
+  //for loop -> use when we know num of iteration
+  //1)for,range       2)for,in
+                  //for,range -> when we give range
+//   for(int i=1;i<11;i++){
+//     print(i); }
+//   int table_num = 5;
+//   for(int i=1;i<=10;i++){          //to print table
+//     print("${table_num}x${i}=${table_num*i}");
+//   }
+//                   //for,in ->for loop using list/dictionary
+//   var list1 =["pro",55,165.60];
+//   for(var a in list1){    //to traverse all alements of a list
+//     print(a);
+//   }
+//   var map1 ={1:'a',2:'b',3:'c'};
+//   for(var a in map1.keys){
+//     print(a);
+//   }
+                  //while->use when we don't know number of iteration,it execute a block of code 
+                  //unless a given conditon is false 
+  bool condition = true;
+  while(condition){
+    print("Hey programmer");
+    condition=false;
+  }
+  int num =10 ;    //initialization
+  while(num<=20){  //condition
+    print(num);    //block of code to be execute
+    num++;         //update value->increment/decrement 
+  }
+  var list2 = [];
+  for(int i=50;i>=35;i--){
+    list2.add(i);
+  }
+  print(list2);
+  //creating a list of elements from 11..20 through looop
+  var list3  = [];
+  for(int i=11;i<21;i++){
+    list3.add(i);
+  }
+  int a=0;
+  while(a<list3.length){
+    print(list3[a]);
+    a++;
+  }
+  
+            //do while loop -> same as while but first time it just execute block of code without checking condition then work as while
+ int num2 = 1;
+  do{
+   print("the number ${num2} is greter then 10");
+   num2++;
+ }while(num2>10);//it will execute only once b/c condition id false so first time it'll execute without checking condition  
+  
+}
