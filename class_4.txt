@@ -1,0 +1,108 @@
+void main(){;
+   print("Hey programmer let's start withfunctions,classes,objects,inheritance");
+                   //functions
+//   return_datatype functons_name(){         <--syntex
+//     block of code
+//   }
+  var name = "hammad";
+  var marks =95;
+  var sub = "oop";
+  // non-perameterized function
+ void discription(){
+   print("A student name ${name} got ${marks} in ${sub}");
+ }
+  //perameterized function + return function
+ dynamic sum(int a, int b){
+   var summ = a+b;
+   return summ;
+ }
+ discription();
+ sum(3,4); //will not show any output because it's an return function so we eill have to store its return value in variable or direct call it in print function
+ var result = sum(3,4);
+ print("result through variable : ${result}");
+ print("result through direct call in print function : ${sum(3,4)}");
+                      //creating oject
+            //NOTE: WE'LL HAVE YO GIVE VALUES FOR EACH OBJECT INDIVIDUAL IN ORDER TO GET VALUES FROM THEM COZ INDIDUAL  INSTANCE CREATED FOR EACH OBJECT
+  var obj_IdCard = IdCard();
+  print(obj_IdCard.AdmissionYear); //TO PRINT AN ATTRIBUTE
+ var obj_marks = marks();
+  obj_marks.Enter_Subjects_Marks(90,89,88,87,86,85);
+  print(obj_marks.sub_marks);
+  obj_marks.Enter_Basic_Info("hammad","abdul hameed","chohan",3,"xyz","eb2023790");
+  obj_marks.Print_Basic_Info();
+  obj_marks.PrintCard();
+  obj_IdCard.PrintCard();//will be empty because i've call enter_bsasic_info method on marks' object so that values are just present in its instance not in IdCard object.
+  
+  var obj_marksheet = marksheet();
+  obj_marksheet.Enter_Basic_Info("hammad","abdul hameed","chohan",3,"xyz","eb2023790");
+  obj_marksheet.Enter_Subjects_Marks(90,89,88,87,86,85);
+  //obj_marksheet.Print_Basic_Info();
+  obj_marksheet.Print_Marksheet();
+}
+                      //classes
+
+// class class_name{              <-- syntex
+//   attribute & methods
+// // }
+class IdCard{
+  String name ="";
+  String FatherName ="";
+  String cast = "";
+  int semester =0;
+  String department = "";
+  int AdmissionYear=2020;
+  String SeatNum = "";
+  void Enter_Basic_Info(String nam,String FatherNam,String castt,int semeste,String departmen,String SeatNu){
+    name = nam;
+    FatherName = FatherNam;
+    cast = castt;
+    semester = semeste;
+    department = departmen;
+    SeatNum =SeatNu; 
+  }
+  void Print_Basic_Info(){
+    print("""
+    NAME : ${name}
+    FATHER NAME : ${FatherName}
+    CAST : ${cast}""");
+  }
+  
+  void PrintCard(){
+    print("""
+    *****************************
+              ID CARD
+    *****************************
+    NAME : ${name}
+    FATHER NAME : ${FatherName}
+    CAST : ${cast}
+    SEMESTER =${semester};
+    DEPARTMENT = ${department};
+    ADMISSION YEAR =${AdmissionYear};
+    SEAT NUMBER = ${SeatNum};
+    *****************************
+    """);
+  }
+}
+         // INHERIRTANACE
+ class marks extends IdCard{
+    var subjects = ["OOP","DCDF","ALP","DM","LA & AG","SM & D"];
+    var sub_marks =[];
+    int Enter_Subjects_Marks(int a,int  b,int c,int d,int e,int f){
+      sub_marks.add(a);sub_marks.add(b);sub_marks.add(c);
+      sub_marks.add(d);sub_marks.add(e);sub_marks.add(e);
+    }  
+ }
+class marksheet extends marks{
+  void Print_Marksheet(){
+    print(""" 
+    **********************************************************************
+                                   MARKSHEET
+    **********************************************************************
+    NAME : ${name}                                SEMESTER : ${semester}
+    FATHER NAME : ${FatherName}                   SEAT #   : ${SeatNum}
+    CAST : ${cast}                                DATE     : 29/4/2021
+    """);
+  for(int i =0; i<subjects.length; i++){
+    print("${subjects[i]}\t ${sub_marks[i]}"); }
+ }
+}
